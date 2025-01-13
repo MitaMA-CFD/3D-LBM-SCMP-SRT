@@ -1,7 +1,5 @@
 #include "LBM.hpp"
 
-using namespace std;
-
 int main()
 {
 
