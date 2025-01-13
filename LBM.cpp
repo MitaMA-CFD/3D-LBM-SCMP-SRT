@@ -24,7 +24,7 @@ int main()
         if (t_step % Nwri == 0 || t_step == 1)
         {
             cout << t_step << endl;
-            write_results(obst, rho, p, upx, upy, upz, t_step);
+             write_results(obst, rho, upx, upy, upz, p, t_step);
             sum(rho);
         }
         stream(obst, ff);
