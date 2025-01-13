@@ -13,6 +13,12 @@
 
 using namespace std;
 
+const int lx = 61, ly = 61, lz = 61;
+
+double rho_w, RR, tau;
+
+int Nwri, t_max, t_step;
+
 // This array defines which lattice positions are occupied by fluid nodes (obst=0)
 // or solid nodes (obst=1)
 int obst[lx][ly][lz];
@@ -135,11 +141,10 @@ void init_density(int obst[lx][ly][lz], double u_x[lx][ly][lz], double u_y[lx][l
                 u_z[x][y][z] = 0;
 
                 rho[x][y][z] = RLW[k];
-                if (pow(x - lx / 2, 2) + pow(y - ly / 2, 2) + pow(z - 25, 2) < pow(RR, 2))
+                if (pow(x - lx / 2, 2) + pow(y - ly / 2, 2) + pow(z - 30, 2) < pow(RR, 2))
                 {
                     rho[x][y][z] = RHW[k];
                 }
-
             }
         }
     }
